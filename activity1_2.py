@@ -9,8 +9,10 @@ def relu(x):
     return np.maximum(0, x)
 
 # Leaky ReLU function
-def leaky_relu(x):
-    return np.where(x > 0, x, x * 0.01)
+# def leaky_relu(x):
+#     return np.where(x > 0, x, x * 0.01)
+def leaky_relu(x, alpha=0.01):
+    return np.maximum(alpha*x, x)
 
 # Tanh function
 def tanh(x):
